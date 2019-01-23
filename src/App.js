@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Top from './components/navbar/Top';
 import Counter from './components/test/Counter';
 import PhoneForm from './components/test/PhoneForm';
+import PhoneInfoList from './components/test/PhoneInfoList';
 import './App.css';
 
 class App extends Component {
@@ -38,9 +39,7 @@ class App extends Component {
         <PhoneForm 
           onCreate={this.handleCreate}
         />
-        <div>
-          {JSON.stringify(information)}
-        </div>
+        <PhoneInfoList data={this.state.information}/>
       </div>
     );
   }
